@@ -9,9 +9,9 @@ source:
   sha256: cce4a71ede140e31f7320490cd37b23a16ea76c860c8c7c3ba2115ef41972343
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [py3k]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - wofpy_config = wof.wofpy_config:main
 
